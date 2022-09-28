@@ -1,11 +1,11 @@
-pipeline{
+pipeline {
     agent any
+
     stages {
-        stage('One'){
-            steps{
-                mvn clean compile
+        stage('Build') {
+            steps {
+                sh 'mvn clean compile'
             }
         }
     }
-
 }
