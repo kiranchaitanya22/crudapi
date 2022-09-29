@@ -16,5 +16,12 @@ pipeline {
                 }
             }
         }
+        stage("Staging") { 
+            steps {
+                withMaven(maven : 'mvn3'){
+                    sh "sudo mvn spring-boot:run" 
+                }        
+            }
+        }
     }
 }
